@@ -1,0 +1,28 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "This is a simple, beginner-friendly weather application that allows users to search for the current weather conditions in any city. The app fetches real-time weather data from a public API and displays it in a user-friendly format.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajat-porwal/Weather-App.git"
+  },
+  "author": "Rajat Porwal <rajatporwal@protonmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajat-porwal/Weather-App/issues"
+  },
+  "homepage": "https://github.com/rajat-porwal/Weather-App#readme",
+  "devDependencies": {
+    "css-loader": "^7.1.1",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
