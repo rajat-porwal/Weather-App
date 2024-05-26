@@ -1,4 +1,5 @@
 import './style.css';
+import { addFooter } from './footer';
 
 const currentTemp = document.getElementById('currentTemp');
 const condition = document.getElementById('condition');
@@ -47,12 +48,25 @@ function fahrenheitToCelsius(fahrenheit) {
     return (fahrenheit - 32) * 5 / 9;
 }
 
+function weatherBackground() {
+    /* Set background depending on weather*/
+    
+}
+
 function displayWeather(response) {
     currentTemp.innerText = response.current.temp_c + '°C';
     condition.innerText = response.current.condition.text;
     locationElem.innerText = response.location.name + ',';
     country.innerText = response.location.country;
     icon.src = 'https:' + response.current.condition.icon;
+
+    switch (condition.innerText) {
+        case 'Clear':
+        case 'Sunny':
+            document.body.style.backgroundImage = 'url("./Asset/clear.jpg")';
+            break;
+        
+      }
 }
 
 function weatherDisplay() {
@@ -91,8 +105,6 @@ function weatherDisplay() {
             FahrenheitBtn.innerText = 'Convert to Fahrenheit';
         }
     });
-
-    
 }
 
 weatherDisplay();
