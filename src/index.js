@@ -70,6 +70,31 @@ function displayWeather(response) {
         case 'Overcast':
             document.body.style.backgroundImage = 'url("./Asset/cloudy.jpg")';
             break;
+        case 'Mist':
+        case 'Patchy rain possible':
+        case 'Patchy sleet possible':
+        case 'Patchy freezing drizzle possible':
+        case 'Fog':
+        case 'Freezing fog':
+        case 'Patchy light drizzle':
+        case 'Light drizzle':
+        case 'Freezing drizzle':
+        case 'Heavy freezing drizzle':
+        case 'Patchy light rain':
+        case 'Light rain':
+        case 'Moderate rain at times':
+        case 'Moderate rain':
+        case 'Heavy rain at times':
+        case 'Heavy rain':
+        case 'Light freezing rain':
+        case 'Moderate or heavy freezing rain':
+        case 'Light rain shower':
+        case 'Moderate or heavy rain shower':
+        case 'Torrential rain shower':
+        case 'Patchy light rain with thunder':
+        case 'Moderate or heavy rain with thunder':
+            document.body.style.backgroundImage = 'url("./Asset/rain.jpg")';
+            break;
       }
 }
 
