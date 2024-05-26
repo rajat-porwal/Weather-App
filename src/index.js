@@ -65,7 +65,11 @@ function displayWeather(response) {
         case 'Sunny':
             document.body.style.backgroundImage = 'url("./Asset/clear.jpg")';
             break;
-        
+        case 'Partly cloudy':
+        case 'Cloudy':
+        case 'Overcast':
+            document.body.style.backgroundImage = 'url("./Asset/cloudy.jpg")';
+            break;
       }
 }
 
