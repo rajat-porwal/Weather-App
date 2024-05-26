@@ -19,3 +19,37 @@ body {
     margin: 0 auto;
     transition: transform 0.3s;
 }
+
+.weatherContainer:hover {
+    transform: scale(1.05);
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    margin-bottom: 20px; 
+}
+
+.search-input {
+    padding: 10px;
+    width: calc(100% - 120px); 
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    margin: 0;
+}
+
+.search-button {
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #4facfe;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #00f2fe;
+}
