@@ -102,3 +102,17 @@ body {
     margin-top: 10px;
     font-size: 0.8em; /* Adjust font size */
 }
+
+.temp-toggle:hover {
+    background-color: #00f2fe;
+}
+
+.temp-toggle.celsius::before {
+    content: '°C';
+    margin-right: 8px;
+}
+
+.temp-toggle.fahrenheit::before {
+    content: '°F';
+    margin-right: 8px;
+}
