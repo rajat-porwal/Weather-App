@@ -53,3 +53,24 @@ body {
 .search-button:hover {
     background-color: #00f2fe;
 }
+
+.temp {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 20px 0; 
+}
+
+.condition-text {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.location-text, .country-text {
+    font-size: 1em;
+    color: #333;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+}
