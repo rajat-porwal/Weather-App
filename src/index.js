@@ -4,6 +4,7 @@ import rainImg from './Asset/rain.jpg';
 import thunderstormImg from './Asset/thunderstorm.jpg';
 import snowImg from './Asset/snow.jpg';
 import mainBackgroundImg from './Asset/main-background.jpg';
+import {addFooter} from '../node_modules/footer-component-by-rajat-porwal/src';
 
 const currentTemp = document.getElementById('currentTemp');
 const condition = document.getElementById('condition');
@@ -175,3 +176,4 @@ function weatherDisplay() {
 }
 
 weatherDisplay();
+addFooter();
