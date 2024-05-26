@@ -1,5 +1,9 @@
-import './style.css';
-import { addFooter } from './footer';
+import clearImg from './Asset/clear.jpg';
+import cloudyImg from './Asset/cloudy.jpg';
+import rainImg from './Asset/rain.jpg';
+import thunderstormImg from './Asset/thunderstorm.jpg';
+import snowImg from './Asset/snow.jpg';
+import mainBackgroundImg from './Asset/main-background.jpg';
 
 const currentTemp = document.getElementById('currentTemp');
 const condition = document.getElementById('condition');
@@ -48,11 +52,6 @@ function fahrenheitToCelsius(fahrenheit) {
     return (fahrenheit - 32) * 5 / 9;
 }
 
-function weatherBackground() {
-    /* Set background depending on weather*/
-    
-}
-
 function displayWeather(response) {
     currentTemp.innerText = response.current.temp_c + '°C';
     condition.innerText = response.current.condition.text;
@@ -60,15 +59,27 @@ function displayWeather(response) {
     country.innerText = response.location.country;
     icon.src = 'https:' + response.current.condition.icon;
 
+    function setBackground(image) {     //add this function because images were not rendering correctly so create the whole function
+        document.body.style.backgroundImage = `url(${image})`;
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundPosition = 'center';
+        document.body.style.backgroundRepeat = 'no-repeat';
+        document.body.style.width = '100vw';
+        document.body.style.height = '100vh';
+        document.body.style.margin = '0';
+        document.body.style.padding = '0';
+        document.body.style.overflow = 'hidden';
+    }
+
     switch (condition.innerText) {
         case 'Clear':
         case 'Sunny':
-            document.body.style.backgroundImage = 'url("./Asset/clear.jpg")';
+            setBackground(clearImg);
             break;
         case 'Partly cloudy':
         case 'Cloudy':
         case 'Overcast':
-            document.body.style.backgroundImage = 'url("./Asset/cloudy.jpg")';
+            setBackground(cloudyImg);
             break;
         case 'Mist':
         case 'Patchy rain possible':
@@ -93,9 +104,36 @@ function displayWeather(response) {
         case 'Torrential rain shower':
         case 'Patchy light rain with thunder':
         case 'Moderate or heavy rain with thunder':
-            document.body.style.backgroundImage = 'url("./Asset/rain.jpg")';
+            setBackground(rainImg);
             break;
-      }
+        case 'Thundery outbreaks possible':
+        case 'Patchy light snow with thunder':
+        case 'Moderate or heavy snow with thunder':
+            setBackground(thunderstormImg);
+            break;
+        case 'Blowing snow':
+        case 'Blizzard':
+        case 'Light sleet':
+        case 'Moderate or heavy sleet':
+        case 'Light sleet showers':
+        case 'Moderate or heavy sleet showers':
+        case 'Light snow':
+        case 'Patchy light snow':
+        case 'Patchy moderate snow':
+        case 'Moderate snow':
+        case 'Patchy heavy snow':
+        case 'Heavy snow':
+        case 'Light snow showers':
+        case 'Moderate or heavy snow showers':
+        case 'Light showers of ice pellets':
+        case 'Moderate or heavy showers of ice pellets':
+        case 'Ice pellets':
+            setBackground(snowImg);
+            break;
+        default:
+            setBackground(mainBackgroundImg);
+            break;
+    }
 }
 
 function weatherDisplay() {
