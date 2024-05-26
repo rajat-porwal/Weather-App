@@ -90,3 +90,15 @@ body {
 .weather-icon{
     animation: bounce 2s infinite;
 }
+
+.temp-toggle {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4facfe;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    font-size: 0.8em; /* Adjust font size */
+}
