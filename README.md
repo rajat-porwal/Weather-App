@@ -112,7 +112,7 @@ You will need `Node.js` and `npm` installed globally on your machine.
 
 
 <!-- AUTHORS -->
-## Authors
+## Author
 
 [ArtisDev]((https://github.com/rajat-porwal)) - [LinkedIn](https://www.linkedin.com/in/rajatporwal/) - rajatporwal@protonmail.com
 
