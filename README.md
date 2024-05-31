@@ -127,4 +127,3 @@ You will need `Node.js` and `npm` installed globally on your machine.
 * [CSS-Tricks](https://css-tricks.com/)
 * [DuckDuckGo](https://duckduckgo.com/)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
